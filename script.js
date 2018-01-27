@@ -7,11 +7,15 @@ const Cat = function(name, src) {
 const cat1 = new Cat('Barsic', 'img/cat0.jpg');
 const cat2 = new Cat('Murzic', 'img/cat1.jpg');
 const cat3 = new Cat('Pashtet', 'img/cat2.jpg');
-const cat4 = new Cat('Pusha', 'img/cat3.jpg');
+const cat4 = new Cat('Zaserya', 'img/cat3.jpg');
 const cat5 = new Cat('Rizhick', 'img/cat4.jpg');
 const cat6 = new Cat('Princess', 'img/cat5.jpeg');
 
-let cats = [cat1, cat2, cat3, cat4, cat5, cat6];
+let cats = [cat1, cat2, cat3, cat4, cat5, cat6].sort((a, b) => {
+	if (a.name < b.name) return -1;
+    if (a.name > b.name) return 1;
+    return 0;
+});
 
 cats.forEach((cat, index) => {
 	const catHTML = document.createElement('div');
