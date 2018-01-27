@@ -3,3 +3,10 @@
   width: 300px;
   margin-bottom: 20px;
 }
+.cat-name {
+  display: inline-block;
+  cursor: pointer;
+}
+.hidden-info .cat-info {
+  display: none;
+}
