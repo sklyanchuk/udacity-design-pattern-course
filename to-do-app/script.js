@@ -10,7 +10,6 @@ const Model = {
     localStorage.todoItems = JSON.stringify(data);
   },
   getAllTodoItems() {
-    console.log(JSON.parse(localStorage.todoItems));
     return JSON.parse(localStorage.todoItems);
   }
 }
