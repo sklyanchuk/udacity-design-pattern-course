@@ -28,7 +28,6 @@ const Controller = {
     View.render();
   },
   getNotes() {
-    console.log(Model.getAllTodoItems());
     return Model.getAllTodoItems();
   }
 }
@@ -39,7 +38,6 @@ const View = {
     document.querySelector('.add-to-do-item').addEventListener('click', (event) => {
       let todoItem = document.querySelector('.to-do-name').value;
       if (todoItem) {
-        console.log(Controller);
         Controller.addToDoItem(todoItem);
         document.querySelector('.to-do-name').value = '';
       }
